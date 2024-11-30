@@ -2,7 +2,7 @@
 //import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, PORT } from './config.js';
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
-const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, PORT } = require('./config.js');
+const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT } = require('./config.js');
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -10,7 +10,7 @@ const mysql = require("mysql2/promise");
 
 
 const app = express();
-const PORT =6000;
+const SERVER_PORT =6000;
 
 // Middleware
 app.use(cors());
@@ -88,5 +88,5 @@ app.delete("/todos/:id", async (req, res) => {
 
 // Iniciar el servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en ${PORT}`);
+  console.log(`Servidor corriendo en ${SERVER_PORT}`);
 });

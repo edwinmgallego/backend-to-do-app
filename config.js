@@ -12,5 +12,5 @@ module.exports = {
     DB_PASSWORD: process.env.DB_PASSWORD,
     DB_USER: process.env.DB_USER,
     DB_PORT: process.env.DB_PORT,
-    PORT: process.env.PORT || 3000
+  
   };
