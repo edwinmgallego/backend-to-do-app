@@ -1,5 +1,8 @@
-const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT } = require("./config");
-
+//const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT } = require("./config");
+//import { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, PORT } from './config.js';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const { DB_HOST, DB_NAME, DB_PASSWORD, DB_USER, DB_PORT, PORT } = require('./config.js');
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
